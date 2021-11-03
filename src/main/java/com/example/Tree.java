@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Iterator;
 
-public interface Tree<T> {
+public interface Tree<T> extends Iterable<T> {
 
     boolean create();
     T insert(T element);
@@ -12,7 +12,6 @@ public interface Tree<T> {
     boolean isEmpty();
     int size();
 
-    Iterator<T> iterator();
     Iterator<T> iteratorPreOrder();
     Iterator<T> iteratorInOrder();
     Iterator<T> iteratorPostOrder();
